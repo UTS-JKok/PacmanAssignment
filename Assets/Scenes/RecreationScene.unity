@@ -378,7 +378,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -408,7 +408,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &528796345
+=======
+--- !u!1 &1614441408
+>>>>>>> Feature-LevelGenerator
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -416,16 +420,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 528796346}
   - component: {fileID: 528796348}
   - component: {fileID: 528796347}
   m_Layer: 0
   m_Name: GhostBlue
+=======
+  - component: {fileID: 1614441410}
+  - component: {fileID: 1614441409}
+  m_Layer: 0
+  m_Name: GameObject
+>>>>>>> Feature-LevelGenerator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &528796346
 Transform:
   m_ObjectHideFlags: 0
@@ -461,10 +473,15 @@ Animator:
   m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &528796348
 SpriteRenderer:
+=======
+--- !u!114 &1614441409
+MonoBehaviour:
+>>>>>>> Feature-LevelGenerator
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 528796345}
   m_Enabled: 1
   m_CastShadows: 0
@@ -949,16 +966,44 @@ SpriteRenderer:
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1388722920
+=======
+  m_GameObject: {fileID: 1614441408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5eb04b945c23ffe4c85fc62c3f11a4af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outsideCorner: {fileID: 6846863391146544834, guid: 492f31609c93435469788bf4f011340e,
+    type: 3}
+  outsideWall: {fileID: 5576435859311848286, guid: 9b2b34e1a509f6a4ea2a37ef497a8d9a,
+    type: 3}
+  insideCorner: {fileID: 2085592142161866588, guid: e262fd67ac3441941a0c8299d6898b8e,
+    type: 3}
+  insideWall: {fileID: 2781000234133911267, guid: 0d27ce50623fa8e4493c7f4d58b44d85,
+    type: 3}
+  standardPellet: {fileID: 5383801359687641876, guid: 2aab709aac9a85146b8f938a2563acbb,
+    type: 3}
+  powerPellet: {fileID: 2125032243222077298, guid: 7e8c37d88b3ff7a4887bfa997e4fdc05,
+    type: 3}
+  outsideJunction: {fileID: 3115737200888438473, guid: 61ce0c02eeefadc4d9ed7940e360f5b5,
+    type: 3}
+--- !u!4 &1614441410
+>>>>>>> Feature-LevelGenerator
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1388722918}
+=======
+  m_GameObject: {fileID: 1614441408}
+>>>>>>> Feature-LevelGenerator
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 1911335363}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1012,6 +1057,8 @@ Transform:
   - {fileID: 1388722920}
   - {fileID: 880271003}
   - {fileID: 598750234}
+=======
+>>>>>>> Feature-LevelGenerator
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
