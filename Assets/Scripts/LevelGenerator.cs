@@ -38,14 +38,14 @@ public class LevelGenerator : MonoBehaviour
      * Get and render map.
      *
      * NB: Rotation uses hardcoded values for map piece type. Also some
-     *     room to improve.
+     *     room to improve. Consider rotation map.
      */
     void RenderMap()
     {
         int rowIndex = 0;
         int columnIndex = 0;
-        Vector3 renderAnchor = new Vector3(-7, 7, 0);
-        Vector3 renderPos = new Vector3(-7, 7, 0);
+        Vector3 renderAnchor = new Vector3(-14, 14, 0);
+        Vector3 renderPos = new Vector3(-14, 14, 0);
 
         List<List<int>> map = GetMap("Recreation");
         foreach (List<int> row in map)
@@ -82,11 +82,31 @@ public class LevelGenerator : MonoBehaviour
                         case 3:
                             if (columnIndex != 0 && (map[rowIndex][columnIndex - 1] == 3 || map[rowIndex][columnIndex - 1] == 4))
                             {
-                                doFlipX = true;
+                                try
+                                {
+                                    if (map[rowIndex][columnIndex + 1] != 4)
+                                    {
+                                        doFlipX = true;
+                                    }
+                                }
+                                catch (System.Exception e)
+                                {
+                                    Debug.Log("Made a quick catch.");
+                                }
                             }
-                            else if (rowIndex != 0 && (map[rowIndex - 1][columnIndex] == 3 || map[rowIndex - 1][columnIndex] == 4))
+                            if (rowIndex != 0 && (map[rowIndex - 1][columnIndex] == 3 || map[rowIndex - 1][columnIndex] == 4))
                             {
-                                doFlipY = true;
+                                try
+                                {
+                                    if (map[rowIndex + 1][columnIndex] != 4)
+                                    {
+                                        doFlipY = true;
+                                    }
+                                }
+                                catch (System.Exception e)
+                                {
+                                    Debug.Log("Made a quick catch.");
+                                }
                             }
                             break;
 
@@ -94,7 +114,25 @@ public class LevelGenerator : MonoBehaviour
                             if (rowIndex != 0 && (map[rowIndex - 1][columnIndex] == 3 || map[rowIndex - 1][columnIndex] == 4
                                                                                       || map[rowIndex - 1][columnIndex] == 7))
                             {
-                                Rotate(mapPiece, 90);
+                                try
+                                {
+                                    if (map[rowIndex + 1][columnIndex] != 0 && map[rowIndex + 1][columnIndex] != 5
+                                                                            && map[rowIndex + 1][columnIndex] != 6)
+                                    {
+                                        Rotate(mapPiece, 90);
+                                    }
+                                }
+                                catch (System.Exception e)
+                                {
+                                    Debug.Log("Made a quick catch.");
+                                }
+                            }
+                            break;
+
+                        case 7:
+                            if (rowIndex != 0 && map[rowIndex - 1][columnIndex] == 4)
+                            {
+                                FlipY(mapPiece);
                             }
                             break;
                     }
